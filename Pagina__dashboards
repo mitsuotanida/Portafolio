@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index,follow" />
+  <title>Portafolio (capturas) | Mitsuo Tanida</title>
+  <style>
+    :root { --bg:#0f172a; --fg:#e2e8f0; --muted:#94a3b8; --card:#111827; --accent:#22d3ee; }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial}
+    header{padding:48px 20px 12px;text-align:center;border-bottom:1px solid #1f2937}
+    h1{margin:0 0 8px;font-size:clamp(26px,4vw,38px)}
+    p.lead{margin:0 0 16px;color:var(--muted)}
+    .wrap{max-width:1200px;margin:0 auto;padding:28px 20px 80px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+    .card{grid-column:span 12;background:linear-gradient(180deg,var(--card),#0b1220);border:1px solid #1f2937;border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    @media(min-width:900px){.card{grid-column:span 12}}
+    .head{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid #1f2937}
+    .head h2{margin:0;font-size:18px}
+    .chip{font-size:12px;color:#0b1220;background:var(--accent);padding:4px 10px;border-radius:999px;font-weight:700}
+
+    .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;padding:16px}
+    .gallery a{grid-column:span 12;display:block;border-radius:12px;overflow:hidden;border:1px solid #1f2937;background:#0b1220}
+    .gallery img{width:100%;display:block}
+    @media(min-width:900px){.gallery a.thumb-lg{grid-column:span 12}.gallery a.thumb-sm{grid-column:span 6}}
+
+    .foot{display:flex;flex-wrap:wrap;gap:12px;padding:0 16px 18px}
+    .btn{appearance:none;border:1px solid #1f2937;background:#0b1220;color:var(--fg);padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:600;font-size:14px}
+    .btn.primary{background:var(--accent);color:#0b1220;border-color:transparent}
+    .note{margin:4px 16px 20px;color:var(--muted);font-size:13px}
+    footer{text-align:center;color:var(--muted);padding:40px 20px;border-top:1px solid #1f2937}
+
+    /* Lightbox */
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;padding:24px;z-index:50}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:95vw;max-height:90vh;border-radius:12px}
+    .lightbox button{position:absolute;top:16px;right:16px;border:0;background:#fff;color:#000;padding:8px 12px;border-radius:8px;font-weight:700;cursor:pointer}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portafolio de Dashboards (capturas)</h1>
+    <p class="lead">Muestras visuales del look & feel de proyectos de analítica educativa. Datos anonimizados.</p>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+
+      <!-- PROYECTO 1 -->
+      <section class="card">
+        <div class="head">
+          <h2>Proyecto 1 · Panel de desempeño</h2>
+          <span class="chip">Capturas</span>
+        </div>
+        <div class="gallery">
+          <!-- Reemplazá src con tus rutas en /assets/img/proyecto1/ -->
+          <a href="assets/img/proyecto1/01-portada.png" class="thumb-lg lightbox-link"><img src="assets/img/proyecto1/01-portada.png" alt="Portada del panel 1"></a>
+          <a href="assets/img/proyecto1/02-detalle.png" class="thumb-sm lightbox-link"><img src="assets/img/proyecto1/02-detalle.png" alt="Detalle gráfico 1"></a>
+          <a href="assets/img/proyecto1/03-filtros.png" class="thumb-sm lightbox-link"><img src="assets/img/proyecto1/03-filtros.png" alt="Controles de filtros"></a>
+        </div>
+        <div class="foot">
+          <a class="btn primary" href="#" target="_blank" rel="noopener">Ficha técnica (PDF)</a>
+          <a class="btn" href="#" target="_blank" rel="noopener">Metodología</a>
+        </div>
+        <p class="note">Las imágenes muestran el estilo visual, navegación y principales KPIs. Los datos han sido anonimizados/simulados.</p>
+      </section>
+
+      <!-- PROYECTO 2 -->
+      <section class="card">
+        <div class="head">
+          <h2>Proyecto 2 · Experiencia estudiantil</h2>
+          <span class="chip">Capturas</span>
+        </div>
+        <div class="gallery">
+          <a href="assets/img/proyecto2/01-portada.png" class="thumb-lg lightbox-link"><img src="assets/img/proyecto2/01-portada.png" alt="Portada panel 2"></a>
+          <a href="assets/img/proyecto2/02-mapas.png" class="thumb-sm lightbox-link"><img src="assets/img/proyecto2/02-mapas.png" alt="Mapa"></a>
+          <a href="assets/img/proyecto2/03-tendencias.png" class="thumb-sm lightbox-link"><img src="assets/img/proyecto2/03-tendencias.png" alt="Tendencias"></a>
+        </div>
+        <div class="foot">
+          <a class="btn primary" href="#" target="_blank">Resumen ejecutivo</a>
+        </div>
+      </section>
+
+      <!-- PROYECTO 3 -->
+      <section class="card">
+        <div class="head">
+          <h2>Proyecto 3 · Efectividad de actividades</h2>
+          <span class="chip">Capturas</span>
+        </div>
+        <div class="gallery">
+          <a href="assets/img/proyecto3/01-portada.png" class="thumb-lg lightbox-link"><img src="assets/img/proyecto3/01-portada.png" alt="Portada panel 3"></a>
+          <a href="assets/img/proyecto3/02-seguimiento.png" class="thumb-sm lightbox-link"><img src="assets/img/proyecto3/02-seguimiento.png" alt="Seguimiento"></a>
+          <a href="assets/img/proyecto3/03-indicadores.png" class="thumb-sm lightbox-link"><img src="assets/img/proyecto3/03-indicadores.png" alt="Indicadores"></a>
+        </div>
+        <div class="foot">
+          <a class="btn" href="#" target="_blank">Descripción del proyecto</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <button id="lb-close" aria-label="Cerrar">Cerrar ✕</button>
+    <img id="lb-img" alt="Vista ampliada">
+  </div>
+
+  <footer>
+    © <span id="year"></span> Mitsuo Tanida · Portafolio
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const lb = document.getElementById('lightbox');
+    const img = document.getElementById('lb-img');
+    const close = document.getElementById('lb-close');
+    document.querySelectorAll('.lightbox-link').forEach(a=>{
+      a.addEventListener('click',e=>{e.preventDefault(); img.src=a.href; lb.classList.add('open');});
+    });
+    close.addEventListener('click',()=>lb.classList.remove('open'));
+    lb.addEventListener('click',e=>{ if(e.target===lb) lb.classList.remove('open'); });
+  </script>
+</body>
+</html>
