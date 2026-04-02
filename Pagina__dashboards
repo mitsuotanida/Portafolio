@@ -1,125 +1,1067 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="index,follow" />
-  <title>Portafolio (capturas) | Mitsuo Tanida</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mitsuo Tanida | Portafolio de Analítica Aplicada</title>
+  <meta
+    name="description"
+    content="Portafolio profesional de Mitsuo Tanida: analítica aplicada, Power BI, automatización de reportes y sistemas de apoyo a la decisión."
+  />
+
+  <!-- Open Graph: esto ayuda a que LinkedIn muestre una tarjeta más linda cuando compartes la web -->
+  <meta property="og:title" content="Mitsuo Tanida | Portafolio de Analítica Aplicada" />
+  <meta
+    property="og:description"
+    content="Portafolio profesional orientado a analítica aplicada, visualización de datos y automatización de procesos para la toma de decisiones basada en evidencia."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://TU-USUARIO.github.io/" />
+  <meta property="og:image" content="https://TU-USUARIO.github.io/preview.png" />
+  <meta name="theme-color" content="#0b1220" />
+
   <style>
-    :root { --bg:#0f172a; --fg:#e2e8f0; --muted:#94a3b8; --card:#111827; --accent:#22d3ee; }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial}
-    header{padding:48px 20px 12px;text-align:center;border-bottom:1px solid #1f2937}
-    h1{margin:0 0 8px;font-size:clamp(26px,4vw,38px)}
-    p.lead{margin:0 0 16px;color:var(--muted)}
-    .wrap{max-width:1200px;margin:0 auto;padding:28px 20px 80px}
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
-    .card{grid-column:span 12;background:linear-gradient(180deg,var(--card),#0b1220);border:1px solid #1f2937;border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-    @media(min-width:900px){.card{grid-column:span 12}}
-    .head{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid #1f2937}
-    .head h2{margin:0;font-size:18px}
-    .chip{font-size:12px;color:#0b1220;background:var(--accent);padding:4px 10px;border-radius:999px;font-weight:700}
+    /*
+      IDEA SIMPLE:
+      - :root guarda colores y tamaños importantes, como una cajita con reglas base.
+      - Así puedes cambiar el estilo completo tocando pocas líneas.
+    */
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0b1220;
+      --panel: rgba(15, 23, 42, 0.78);
+      --panel-strong: rgba(15, 23, 42, 0.95);
+      --line: rgba(148, 163, 184, 0.18);
+      --text: #e5eefc;
+      --muted: #9fb0c9;
+      --accent: #67e8f9;
+      --accent-2: #8b5cf6;
+      --accent-3: #22c55e;
+      --shadow: 0 18px 60px rgba(2, 8, 23, 0.45);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --container: 1160px;
+    }
 
-    .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;padding:16px}
-    .gallery a{grid-column:span 12;display:block;border-radius:12px;overflow:hidden;border:1px solid #1f2937;background:#0b1220}
-    .gallery img{width:100%;display:block}
-    @media(min-width:900px){.gallery a.thumb-lg{grid-column:span 12}.gallery a.thumb-sm{grid-column:span 6}}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    .foot{display:flex;flex-wrap:wrap;gap:12px;padding:0 16px 18px}
-    .btn{appearance:none;border:1px solid #1f2937;background:#0b1220;color:var(--fg);padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:600;font-size:14px}
-    .btn.primary{background:var(--accent);color:#0b1220;border-color:transparent}
-    .note{margin:4px 16px 20px;color:var(--muted);font-size:13px}
-    footer{text-align:center;color:var(--muted);padding:40px 20px;border-top:1px solid #1f2937}
+    html {
+      scroll-behavior: smooth;
+    }
 
-    /* Lightbox */
-    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;padding:24px;z-index:50}
-    .lightbox.open{display:flex}
-    .lightbox img{max-width:95vw;max-height:90vh;border-radius:12px}
-    .lightbox button{position:absolute;top:16px;right:16px;border:0;background:#fff;color:#000;padding:8px 12px;border-radius:8px;font-weight:700;cursor:pointer}
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(103, 232, 249, 0.14), transparent 30%),
+        radial-gradient(circle at top right, rgba(139, 92, 246, 0.16), transparent 25%),
+        linear-gradient(180deg, #07111f 0%, #0a1428 100%);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--container));
+      margin: 0 auto;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(15, 23, 42, 0.55);
+      color: var(--muted);
+      font-size: 0.92rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .pill-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 16px rgba(103, 232, 249, 0.7);
+    }
+
+    .section {
+      padding: 84px 0;
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .section-copy {
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(7, 17, 31, 0.72);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(103, 232, 249, 0.18), rgba(139, 92, 246, 0.28));
+      border: 1px solid rgba(103, 232, 249, 0.16);
+      box-shadow: var(--shadow);
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.96rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), #7dd3fc);
+      color: #04111d;
+      font-weight: 800;
+      box-shadow: 0 12px 34px rgba(103, 232, 249, 0.22);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 72px 0 36px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-card,
+    .glass-card,
+    .project-card,
+    .focus-card,
+    .timeline-card,
+    .contact-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero-card {
+      padding: 34px;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -40px -50px auto;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(103, 232, 249, 0.18), transparent 62%);
+      z-index: -1;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 4.8rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      margin: 18px 0 18px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #ffffff 0%, #b4c7ec 52%, #67e8f9 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-copy {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 680px;
+      margin-bottom: 26px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 0 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #a5f3fc);
+      color: #04111d;
+      box-shadow: 0 12px 30px rgba(103, 232, 249, 0.22);
+    }
+
+    .btn-secondary {
+      background: rgba(15, 23, 42, 0.6);
+      border-color: var(--line);
+      color: var(--text);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .stat {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(2, 8, 23, 0.28);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.35rem;
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 18px;
+    }
+
+    .glass-card {
+      padding: 24px;
+    }
+
+    .profile-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 20px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(103, 232, 249, 0.16), rgba(139, 92, 246, 0.22));
+      border: 1px solid rgba(103, 232, 249, 0.15);
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+
+    .profile-role {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .mini-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .mini-item {
+      padding: 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.12);
+      background: rgba(2, 8, 23, 0.25);
+    }
+
+    .mini-item strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .mini-item span {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .panel-block {
+      padding: 28px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+    }
+
+    .panel-block p {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: rgba(2, 8, 23, 0.28);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+      color: #d7e4f9;
+      font-size: 0.92rem;
+    }
+
+    /* Focus */
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .focus-card {
+      padding: 24px;
+    }
+
+    .focus-number {
+      font-size: 0.82rem;
+      color: var(--accent);
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .focus-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.14rem;
+    }
+
+    .focus-card p {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .project-type {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(103, 232, 249, 0.1);
+      color: var(--accent);
+      border: 1px solid rgba(103, 232, 249, 0.14);
+      font-size: 0.82rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .project-card h3 {
+      font-size: 1.18rem;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #dffaff;
+      font-weight: 700;
+    }
+
+    /* Timeline */
+    .timeline {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .timeline-card {
+      padding: 24px;
+    }
+
+    .timeline-card h3 {
+      margin-bottom: 12px;
+    }
+
+    .timeline-steps {
+      display: grid;
+      gap: 14px;
+    }
+
+    .timeline-step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .step-index {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: rgba(103, 232, 249, 0.1);
+      border: 1px solid rgba(103, 232, 249, 0.14);
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .timeline-step p {
+      color: var(--muted);
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 18px;
+    }
+
+    .contact-card {
+      padding: 28px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(2, 8, 23, 0.28);
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .availability {
+      display: grid;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .availability div {
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(2, 8, 23, 0.25);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+      color: var(--muted);
+    }
+
+    .availability strong {
+      color: var(--text);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* Footer */
+    .site-footer {
+      padding: 28px 0 44px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(148, 163, 184, 0.1);
+      padding-top: 22px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .about-grid,
+      .timeline,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .focus-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px 0;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .hero {
+        padding-top: 34px;
+      }
+
+      .hero-card,
+      .glass-card,
+      .panel-block,
+      .project-card,
+      .focus-card,
+      .timeline-card,
+      .contact-card {
+        border-radius: 22px;
+      }
+
+      .hero-card {
+        padding: 24px;
+      }
+
+      .hero-stats,
+      .focus-grid,
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Portafolio de Dashboards (capturas)</h1>
-    <p class="lead">Muestras visuales del look & feel de proyectos de analítica educativa. Datos anonimizados.</p>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark">MT</span>
+        <span>Mitsuo Tanida</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#enfoque">Enfoque</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#contacto" class="nav-cta">Contacto</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="wrap">
-    <div class="grid">
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <article class="hero-card">
+          <div class="pill">
+            <span class="pill-dot"></span>
+            <span>Portafolio profesional · Analítica aplicada · BI · Decisión estratégica</span>
+          </div>
 
-      <!-- PROYECTO 1 -->
-      <section class="card">
-        <div class="head">
-          <h2>Proyecto 1 · Panel de desempeño</h2>
-          <span class="chip">Capturas</span>
-        </div>
-        <div class="gallery">
-          <!-- Reemplazá src con tus rutas en /assets/img/proyecto1/ -->
-          <a href="assets/img/proyecto1/01-portada.png" class="thumb-lg lightbox-link"><img src="assets/img/proyecto1/01-portada.png" alt="Portada del panel 1"></a>
-          <a href="assets/img/proyecto1/02-detalle.png" class="thumb-sm lightbox-link"><img src="assets/img/proyecto1/02-detalle.png" alt="Detalle gráfico 1"></a>
-          <a href="assets/img/proyecto1/03-filtros.png" class="thumb-sm lightbox-link"><img src="assets/img/proyecto1/03-filtros.png" alt="Controles de filtros"></a>
-        </div>
-        <div class="foot">
-          <a class="btn primary" href="#" target="_blank" rel="noopener">Ficha técnica (PDF)</a>
-          <a class="btn" href="#" target="_blank" rel="noopener">Metodología</a>
-        </div>
-        <p class="note">Las imágenes muestran el estilo visual, navegación y principales KPIs. Los datos han sido anonimizados/simulados.</p>
-      </section>
+          <h1 class="hero-title">
+            Diseño soluciones de <span>datos, visualización y decisión</span> con foco técnico y estratégico.
+          </h1>
 
-      <!-- PROYECTO 2 -->
-      <section class="card">
-        <div class="head">
-          <h2>Proyecto 2 · Experiencia estudiantil</h2>
-          <span class="chip">Capturas</span>
-        </div>
-        <div class="gallery">
-          <a href="assets/img/proyecto2/01-portada.png" class="thumb-lg lightbox-link"><img src="assets/img/proyecto2/01-portada.png" alt="Portada panel 2"></a>
-          <a href="assets/img/proyecto2/02-mapas.png" class="thumb-sm lightbox-link"><img src="assets/img/proyecto2/02-mapas.png" alt="Mapa"></a>
-          <a href="assets/img/proyecto2/03-tendencias.png" class="thumb-sm lightbox-link"><img src="assets/img/proyecto2/03-tendencias.png" alt="Tendencias"></a>
-        </div>
-        <div class="foot">
-          <a class="btn primary" href="#" target="_blank">Resumen ejecutivo</a>
-        </div>
-      </section>
+          <p class="hero-copy">
+            Este portafolio reúne proyectos orientados a transformar datos en sistemas útiles para la gestión: dashboards ejecutivos, automatización de reportes, modelamiento de indicadores, análisis estadístico y diseño de flujos de información para contextos académicos, institucionales y organizacionales.
+          </p>
 
-      <!-- PROYECTO 3 -->
-      <section class="card">
-        <div class="head">
-          <h2>Proyecto 3 · Efectividad de actividades</h2>
-          <span class="chip">Capturas</span>
-        </div>
-        <div class="gallery">
-          <a href="assets/img/proyecto3/01-portada.png" class="thumb-lg lightbox-link"><img src="assets/img/proyecto3/01-portada.png" alt="Portada panel 3"></a>
-          <a href="assets/img/proyecto3/02-seguimiento.png" class="thumb-sm lightbox-link"><img src="assets/img/proyecto3/02-seguimiento.png" alt="Seguimiento"></a>
-          <a href="assets/img/proyecto3/03-indicadores.png" class="thumb-sm lightbox-link"><img src="assets/img/proyecto3/03-indicadores.png" alt="Indicadores"></a>
-        </div>
-        <div class="foot">
-          <a class="btn" href="#" target="_blank">Descripción del proyecto</a>
-        </div>
-      </section>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/mitsuo-tanida-becerra-57882275/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn btn-secondary" href="mailto:TU-CORREO@MAIL.COM">Escribirme</a>
+          </div>
 
-    </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>BI &amp; Power BI</strong>
+              <span>Dashboards, KPIs y visualización ejecutiva.</span>
+            </div>
+            <div class="stat">
+              <strong>ETL &amp; Automatización</strong>
+              <span>Procesos robustos para datos repetitivos y escalables.</span>
+            </div>
+            <div class="stat">
+              <strong>Analítica aplicada</strong>
+              <span>Modelos, indicadores y apoyo a la decisión.</span>
+            </div>
+          </div>
+        </article>
+
+        <aside class="hero-side">
+          <section class="glass-card">
+            <div class="profile-top">
+              <div class="avatar">MT</div>
+              <div>
+                <h2 style="font-size: 1.18rem; margin-bottom: 4px;">Mitsuo Tanida</h2>
+                <p class="profile-role">Analítica aplicada · Power BI · Automatización · Storytelling analítico</p>
+              </div>
+            </div>
+
+            <div class="mini-list">
+              <div class="mini-item">
+                <strong>Especialidad</strong>
+                <span>Transformar datos dispersos en sistemas claros para monitoreo, gestión y toma de decisiones.</span>
+              </div>
+              <div class="mini-item">
+                <strong>Herramientas frecuentes</strong>
+                <span>Power BI, Power Query, Excel, SQL, R, automatización y diseño de flujos de información.</span>
+              </div>
+              <div class="mini-item">
+                <strong>Estilo de trabajo</strong>
+                <span>Foco en claridad ejecutiva, solidez técnica, trazabilidad y utilidad real del dato.</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="glass-card">
+            <div class="eyebrow">Valor profesional</div>
+            <h2 style="font-size: 1.4rem; margin-bottom: 12px;">Más que reportes: sistemas que ayudan a decidir</h2>
+            <p class="profile-role">
+              Mi foco no está solo en “mostrar números”, sino en construir productos analíticos que ordenen la información, aceleren la lectura ejecutiva y faciliten mejores decisiones.
+            </p>
+          </section>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="sobre-mi">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Sobre mí</div>
+          <h2 class="section-title">Una mirada de portafolio, no solo de herramientas</h2>
+          <p class="section-copy">
+            Acá no se trata solamente de saber usar software. Se trata de pensar el dato como un sistema: desde su captura y limpieza hasta su traducción en decisiones, indicadores y visualizaciones que realmente sirvan.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <article class="panel-block">
+            <p>
+              Trabajo en el cruce entre analítica aplicada, visualización de información y automatización de procesos. Me interesa diseñar soluciones que sean sólidas por dentro y claras por fuera: técnicamente consistentes, visualmente limpias y fáciles de usar para quienes toman decisiones.
+            </p>
+            <p>
+              Este portafolio muestra una selección de proyectos y líneas de trabajo que reflejan esa forma de construir: organización de datos, modelamiento de KPIs, dashboards ejecutivos, reporting automatizado, análisis estadístico y arquitectura de información.
+            </p>
+          </article>
+
+          <article class="panel-block">
+            <h3 style="margin-bottom: 14px; font-size: 1.18rem;">Áreas que aparecen en este portafolio</h3>
+            <div class="tags">
+              <span class="tag">Power BI</span>
+              <span class="tag">Business Intelligence</span>
+              <span class="tag">Power Query / ETL</span>
+              <span class="tag">Automatización de reportes</span>
+              <span class="tag">Storytelling analítico</span>
+              <span class="tag">KPIs y monitoreo</span>
+              <span class="tag">SQL</span>
+              <span class="tag">R y análisis estadístico</span>
+              <span class="tag">Modelamiento de información</span>
+              <span class="tag">Toma de decisiones</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="enfoque">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Enfoque</div>
+          <h2 class="section-title">Qué tipo de problemas busco resolver</h2>
+          <p class="section-copy">
+            Mi trabajo suele organizarse en cuatro frentes. Esa estructura hace que los proyectos no queden como piezas aisladas, sino como soluciones conectadas entre sí.
+          </p>
+        </div>
+
+        <div class="focus-grid">
+          <article class="focus-card">
+            <div class="focus-number">01</div>
+            <h3>Integración y orden de datos</h3>
+            <p>Unificación de fuentes, limpieza, normalización y construcción de procesos ETL para que la información sea confiable y reutilizable.</p>
+          </article>
+
+          <article class="focus-card">
+            <div class="focus-number">02</div>
+            <h3>Visualización ejecutiva</h3>
+            <p>Diseño de dashboards con foco en lectura rápida, jerarquía visual, comparación de indicadores y apoyo a la gestión.</p>
+          </article>
+
+          <article class="focus-card">
+            <div class="focus-number">03</div>
+            <h3>Automatización y eficiencia</h3>
+            <p>Reducción de tareas manuales mediante flujos repetibles, estructuras robustas y salidas que se actualicen con menor fricción.</p>
+          </article>
+
+          <article class="focus-card">
+            <div class="focus-number">04</div>
+            <h3>Análisis para decidir</h3>
+            <p>Transformación del dato en evidencia útil: KPIs, alertas, tendencias, hallazgos accionables y criterios de seguimiento.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proyectos">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Proyectos</div>
+          <h2 class="section-title">Selección de trabajos y líneas de desarrollo</h2>
+          <p class="section-copy">
+            Debajo tienes una estructura base de proyectos. Puedes dejarla tal cual al inicio y luego reemplazar cada enlace por tus demos, videos, repositorios o capturas reales.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-top">
+              <h3>Dashboards estratégicos para monitoreo institucional</h3>
+              <span class="project-type">Power BI</span>
+            </div>
+            <p>
+              Desarrollo de tableros orientados a seguimiento de indicadores, análisis de desempeño y lectura ejecutiva de resultados mediante visualizaciones claras, comparables y accionables.
+            </p>
+            <div class="project-meta">
+              <span class="tag">KPIs</span>
+              <span class="tag">Storytelling</span>
+              <span class="tag">Gobernanza visual</span>
+            </div>
+            <a class="project-link" href="#">Ver demo del proyecto →</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <h3>Automatización de reportes y procesos de actualización</h3>
+              <span class="project-type">ETL</span>
+            </div>
+            <p>
+              Estructuración de flujos de carga, limpieza y transformación de datos para disminuir reprocesos manuales, mejorar trazabilidad y acelerar la disponibilidad de información útil.
+            </p>
+            <div class="project-meta">
+              <span class="tag">Power Query</span>
+              <span class="tag">Excel</span>
+              <span class="tag">Escalabilidad</span>
+            </div>
+            <a class="project-link" href="#">Ver detalle técnico →</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <h3>Sistemas de apoyo a la decisión basados en evidencia</h3>
+              <span class="project-type">Analytics</span>
+            </div>
+            <p>
+              Diseño de estructuras que convierten datos operativos en señales útiles para la toma de decisiones, integrando lógica de negocio, indicadores y visualización estratégica.
+            </p>
+            <div class="project-meta">
+              <span class="tag">Indicadores</span>
+              <span class="tag">Decisión</span>
+              <span class="tag">Diseño de información</span>
+            </div>
+            <a class="project-link" href="#">Explorar caso de uso →</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <h3>Análisis estadístico y validación de instrumentos</h3>
+              <span class="project-type">R / Estadística</span>
+            </div>
+            <p>
+              Aplicación de análisis estadístico para apoyar evaluación, interpretación de resultados y fortalecimiento metodológico en instrumentos y bases de datos.
+            </p>
+            <div class="project-meta">
+              <span class="tag">R</span>
+              <span class="tag">Fiabilidad</span>
+              <span class="tag">Análisis</span>
+            </div>
+            <a class="project-link" href="#">Ver metodología →</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <h3>Arquitectura de datos para seguimiento de procesos</h3>
+              <span class="project-type">Data Design</span>
+            </div>
+            <p>
+              Modelamiento de tablas, relaciones y criterios de estructura para que los datos soporten análisis repetibles, filtros consistentes y visualizaciones mantenibles en el tiempo.
+            </p>
+            <div class="project-meta">
+              <span class="tag">Modelo de datos</span>
+              <span class="tag">Relaciones</span>
+              <span class="tag">Consistencia</span>
+            </div>
+            <a class="project-link" href="#">Ver arquitectura →</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <h3>Portafolio de experimentos y prototipos analíticos</h3>
+              <span class="project-type">Lab</span>
+            </div>
+            <p>
+              Espacio para pruebas, conceptos y prototipos donde exploro nuevas formas de comunicar resultados, mejorar procesos y elevar el estándar visual y técnico del análisis.
+            </p>
+            <div class="project-meta">
+              <span class="tag">Prototipos</span>
+              <span class="tag">UX analítica</span>
+              <span class="tag">Innovación</span>
+            </div>
+            <a class="project-link" href="#">Ver laboratorio →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proceso">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Proceso</div>
+          <h2 class="section-title">Cómo pienso un proyecto analítico</h2>
+          <p class="section-copy">
+            Esta parte es clave porque muestra criterio profesional. No solo dices “sé usar herramientas”, sino “sé cómo abordar un problema con método”.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-card">
+            <h3>De los datos al sistema</h3>
+            <div class="timeline-steps">
+              <div class="timeline-step">
+                <div class="step-index">1</div>
+                <div>
+                  <strong>Entender el problema</strong>
+                  <p>Definir qué decisión hay que apoyar, qué necesita ver el usuario y qué pregunta real debe responder el sistema.</p>
+                </div>
+              </div>
+              <div class="timeline-step">
+                <div class="step-index">2</div>
+                <div>
+                  <strong>Ordenar la información</strong>
+                  <p>Revisar calidad de datos, fuentes disponibles, estructuras, nombres, consistencia y frecuencia de actualización.</p>
+                </div>
+              </div>
+              <div class="timeline-step">
+                <div class="step-index">3</div>
+                <div>
+                  <strong>Modelar indicadores</strong>
+                  <p>Diseñar métricas claras, comparables y útiles, cuidando que el resultado represente bien el fenómeno que se quiere observar.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-card">
+            <h3>Del sistema a la decisión</h3>
+            <div class="timeline-steps">
+              <div class="timeline-step">
+                <div class="step-index">4</div>
+                <div>
+                  <strong>Diseñar la experiencia visual</strong>
+                  <p>Construir dashboards y salidas que prioricen lectura, jerarquía, contexto y rapidez interpretativa.</p>
+                </div>
+              </div>
+              <div class="timeline-step">
+                <div class="step-index">5</div>
+                <div>
+                  <strong>Automatizar lo repetible</strong>
+                  <p>Reducir fricción operativa para que el sistema siga funcionando bien cuando crecen los datos o cambian los periodos.</p>
+                </div>
+              </div>
+              <div class="timeline-step">
+                <div class="step-index">6</div>
+                <div>
+                  <strong>Convertir resultados en acción</strong>
+                  <p>Presentar hallazgos de forma útil para seguimiento, priorización, conversación ejecutiva y mejora continua.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="container contact-grid">
+        <article class="contact-card">
+          <div class="eyebrow">Contacto</div>
+          <h2 class="section-title" style="font-size: clamp(2rem, 4vw, 2.7rem);">Conversemos</h2>
+          <p class="section-copy">
+            Si quieres ver una versión más completa, sumar demos reales o conectar este portafolio con tus perfiles y repositorios, acá puedes dejar tus enlaces principales.
+          </p>
+
+          <div class="contact-links">
+            <a class="contact-link" href="https://www.linkedin.com/in/mitsuo-tanida-becerra-57882275/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="contact-link" href="https://github.com/TU-USUARIO" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="contact-link" href="mailto:TU-CORREO@MAIL.COM">Email</a>
+            <a class="contact-link" href="#proyectos">Ver proyectos</a>
+          </div>
+        </article>
+
+        <aside class="contact-card">
+          <h3 style="font-size: 1.24rem; margin-bottom: 10px;">Qué te conviene reemplazar apenas lo subas</h3>
+          <div class="availability">
+            <div>
+              <strong>1. Enlaces</strong>
+              Cambia TU-USUARIO y TU-CORREO por tus datos reales.
+            </div>
+            <div>
+              <strong>2. Proyectos</strong>
+              Reemplaza los botones “Ver demo” por tus páginas, videos, PDFs o reportes publicados.
+            </div>
+            <div>
+              <strong>3. Vista previa</strong>
+              Sube una imagen llamada <code>preview.png</code> para que LinkedIn muestre una tarjeta más pro al compartir el sitio.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
   </main>
 
-  <div class="lightbox" id="lightbox">
-    <button id="lb-close" aria-label="Cerrar">Cerrar ✕</button>
-    <img id="lb-img" alt="Vista ampliada">
-  </div>
-
-  <footer>
-    © <span id="year"></span> Mitsuo Tanida · Portafolio
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© 2026 Mitsuo Tanida. Portafolio profesional de analítica aplicada.</span>
+      <span>Hecho para GitHub Pages · rápido, simple y fácil de mantener</span>
+    </div>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const lb = document.getElementById('lightbox');
-    const img = document.getElementById('lb-img');
-    const close = document.getElementById('lb-close');
-    document.querySelectorAll('.lightbox-link').forEach(a=>{
-      a.addEventListener('click',e=>{e.preventDefault(); img.src=a.href; lb.classList.add('open');});
-    });
-    close.addEventListener('click',()=>lb.classList.remove('open'));
-    lb.addEventListener('click',e=>{ if(e.target===lb) lb.classList.remove('open'); });
-  </script>
 </body>
 </html>
